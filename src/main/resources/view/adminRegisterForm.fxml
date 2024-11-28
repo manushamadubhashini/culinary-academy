@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="738.0" prefWidth="1414.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.culinary.academy.controller.adminRegisterFormController">
+   <children>
+      <Label layoutX="390.0" layoutY="543.0" styleClass="label-or">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Line endX="125.0" layoutX="971.0" layoutY="550.0" startX="44.0" strokeWidth="0.4" />
+      <ImageView fitHeight="747.0" fitWidth="1414.0" layoutY="-10.0">
+         <image>
+            <Image url="@../asserts/images/istockphoto-1345520286-612x612.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="730.0" layoutY="32.0" opacity="0.5" prefHeight="656.0" prefWidth="652.0" styleClass="Login-card" stylesheets="@../asserts/css/dashboardStyle.css">
+         <children>
+            <AnchorPane layoutX="65.0" layoutY="100.0" prefHeight="525.0" prefWidth="520.0" style="-fx-background-radius: 20;" styleClass="Login-card2" stylesheets="@../asserts/css/dashboardStyle.css">
+               <children>
+                  <ImageView fitHeight="507.0" fitWidth="499.0" layoutX="13.0" layoutY="10.0" styleClass="Login-card-img">
+                     <image>
+                        <Image url="@../asserts/images/wood2.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtUseName" layoutX="162.0" layoutY="72.0" prefHeight="27.0" prefWidth="212.0" promptText="Enter User Name" style="-fx-border-color: black; -fx-border-width: 2;" />
+                  <Line endX="253.5999755859375" endY="7.199981689453125" layoutX="146.0" layoutY="103.0" startX="-20.0" startY="7.199981689453125" strokeWidth="3.0" />
+                  <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="135.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/images/user-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="256.800048828125" layoutX="142.0" layoutY="61.0" startX="-14.4000244140625" strokeWidth="3.0" />
+                  <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="135.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/images/password-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="250.4000244140625" endY="7.199981689453125" layoutX="146.0" layoutY="153.0" startX="-18.4000244140625" startY="7.199981689453125" strokeWidth="3.0" />
+                  <Text layoutX="121.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <JFXButton fx:id="btnRegister" layoutX="160.0" layoutY="450.0" onAction="#btnRegisterOnAction" prefHeight="40.0" prefWidth="203.0" style="-fx-background-color: #fff67b; -fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 3;" text="Sign Up" textFill="#202020">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Text layoutX="125.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Line endX="-100.0" endY="27.0" layoutX="226.0" layoutY="80.0" startX="-100.0" startY="-17.800018310546875" strokeWidth="3.0" />
+                  <Line endX="-100.0" endY="27.0" layoutX="498.0" layoutY="81.0" startX="-100.0" startY="-17.800018310546875" strokeWidth="3.0" />
+                  <Line endX="-100.0" endY="25.79998779296875" layoutX="227.0" layoutY="181.0" startX="-100.0" startY="-17.800018310546875" strokeWidth="3.0" />
+                  <Line endX="-100.0" endY="32.699981689453125" layoutX="497.0" layoutY="175.0" startX="-100.0" startY="-14.300018310546875" strokeWidth="3.0" />
+                  <Line endX="106.0" endY="7.199981689453125" layoutX="289.0" layoutY="202.0" startX="-162.4000244140625" startY="7.199981689453125" strokeWidth="3.0" />
+                  <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="135.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/images/password-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="250.4000244140625" endY="7.199981689453125" layoutX="147.0" layoutY="258.0" startX="-18.4000244140625" startY="7.199981689453125" strokeWidth="3.0" />
+                  <Line endX="-100.0" endY="25.79998779296875" layoutX="228.0" layoutY="286.0" startX="-100.0" startY="-17.800018310546875" strokeWidth="3.0" />
+                  <Line endX="-100.0" endY="32.699981689453125" layoutX="497.0" layoutY="281.0" startX="-100.0" startY="-14.300018310546875" strokeWidth="3.0" />
+                  <Line endX="106.0" endY="7.199981689453125" layoutX="290.0" layoutY="307.0" startX="-162.4000244140625" startY="7.199981689453125" strokeWidth="3.0" />
+                  <PasswordField fx:id="txtConFirmPassword" layoutX="162.0" layoutY="275.0" prefHeight="30.0" prefWidth="212.0" promptText="Enter Confirm Password" style="-fx-border-width: 2; -fx-border-color: black;" />
+                  <PasswordField fx:id="txtPassword" layoutX="162.0" layoutY="169.0" prefHeight="30.0" prefWidth="212.0" promptText="Enter Password" style="-fx-border-width: 2; -fx-border-color: black;" />
+                  <Text layoutX="121.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Line endX="250.4000244140625" endY="7.199981689453125" layoutX="147.0" layoutY="368.0" startX="-18.4000244140625" startY="7.199981689453125" strokeWidth="3.0" />
+                  <Line endX="-100.0" endY="25.79998779296875" layoutX="228.0" layoutY="396.0" startX="-100.0" startY="-17.800018310546875" strokeWidth="3.0" />
+                  <Line endX="-100.0" endY="32.699981689453125" layoutX="497.0" layoutY="391.0" startX="-100.0" startY="-14.300018310546875" strokeWidth="3.0" />
+                  <Line endX="106.0" endY="7.199981689453125" layoutX="290.0" layoutY="417.0" startX="-162.4000244140625" startY="7.199981689453125" strokeWidth="3.0" />
+                  <Text layoutX="128.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Type">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtUserType" layoutX="162.0" layoutY="385.0" prefHeight="27.0" prefWidth="212.0" promptText="Enter User Type" style="-fx-border-color: black; -fx-border-width: 2;" />
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="133.0" layoutY="385.0">
+                     <image>
+                        <Image url="@../../../../../../Downloads/icons8-users-30.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text layoutX="273.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="442.0" prefWidth="348.0" styleClass="culinary-card" stylesheets="@../asserts/css/dashboardStyle.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="92.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/images/logo.png" />
+               </image>
+            </ImageView>
+            <Text fill="#615656" layoutX="16.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Culinary Arts Academy">
+               <font>
+                  <Font name="System Bold Italic" size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#615656" layoutX="105.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bulid Your Future">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="229.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="449.0" fitWidth="689.0" layoutX="110.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/images/culinary2-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

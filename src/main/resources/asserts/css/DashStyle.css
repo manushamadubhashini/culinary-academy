@@ -1,0 +1,24 @@
+/* Default button style */
+#btn {
+    -fx-background-color: #fff67b;
+    -fx-text-fill: #000000;
+    -fx-font-size: 32px;
+    -fx-border-radius: 20 0 0 20;
+    -fx-background-radius: 20 0 0 20;
+    -fx-alignment: CENTER-LEFT;
+}
+
+/* Button hover style */
+#btn:hover {
+    -fx-background-color: #FFFFFF;
+}
+
+/* Button pressed style */
+#btn:pressed {
+    -fx-background-color: #FFFFFF;
+}
+
+/* Button armed style (continuing pressed style) */
+#btn:armed {
+    -fx-background-color: #FFFFFF;
+}

@@ -1,0 +1,11 @@
+.mfx-text-field-error{
+    -mfx-main: #ff3e56;
+    -mfx-line-color: #ff3e56;
+    -mfx-border-color: #ff3e56;
+    -mfx-float-text-color: #ff3e56;
+}
+.mfx-text-field{
+    -mfx-main: green;
+    -fx-font-size: 15;
+    -fx-font-family: 'Visby Round CF Medium';
+}
