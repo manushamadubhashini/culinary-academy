@@ -31,7 +31,7 @@
                   <URL value="@../asserts/css/DashStyle.css" />
                </stylesheets>
             </Button>
-            <Button id="btn" layoutX="28.0" layoutY="379.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="299.0" stylesheets="@../asserts/css/DashStyle.css" text="Students">
+            <Button id="btn" fx:id="btnStudent" layoutX="28.0" layoutY="379.0" mnemonicParsing="false" onAction="#btnStudentOnAction" prefHeight="60.0" prefWidth="299.0" stylesheets="@../asserts/css/DashStyle.css" text="Students">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -49,23 +49,23 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button id="btn" fx:id="btnSetting" layoutX="28.0" layoutY="549.0" mnemonicParsing="false" onAction="#btnSettingOnAction" prefHeight="60.0" prefWidth="299.0" text="Setting">
+            <Button id="btn" fx:id="btnSetting" layoutX="28.0" layoutY="549.0" mnemonicParsing="false" onAction="#btnSettingOnAction" prefHeight="60.0" prefWidth="299.0" text="Registration">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../asserts/images/icons8-setting-50.png" />
+                        <Image url="@../asserts/images/icons8-registration-30.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Text layoutX="14.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-family: 'Montserrat', sans-serif;" text="The Culinary Academy" wrappingWidth="299.2" />
-            <Circle layoutX="164.0" layoutY="203.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" />
-            <ImageView layoutX="149.0" layoutY="173.0">
+            <Text layoutX="13.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-family: 'Montserrat', sans-serif;" text="The Culinary Academy" wrappingWidth="299.2" />
+            <Circle layoutX="163.0" layoutY="180.0" radius="39.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView layoutX="148.0" layoutY="150.0">
                <image>
                   <Image url="@../asserts/images/icons8-admin-30 (1).png" />
                </image>
             </ImageView>
-            <Text fill="#fff6f6" layoutX="141.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin">
+            <Text fill="#fff6f6" layoutX="140.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -74,13 +74,20 @@
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../asserts/images/logout.png" />
+                        <Image url="@../asserts/images/icons8-logout-30.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="bodyRoot" layoutX="325.0" prefHeight="1031.0" prefWidth="1010.0" />
+      <AnchorPane fx:id="bodyRoot" layoutX="325.0" prefHeight="1031.0" prefWidth="1020.0">
+         <children>
+            <ImageView fitHeight="889.0" fitWidth="1082.0" layoutY="-1.0">
+               <image>
+                  <Image url="@../asserts/images/culinary123.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

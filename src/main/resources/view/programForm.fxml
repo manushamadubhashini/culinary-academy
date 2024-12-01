@@ -14,19 +14,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="897.0" prefWidth="1022.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.culinary.academy.controller.programFormController">
+<AnchorPane prefHeight="861.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.culinary.academy.controller.programFormController">
    <children>
       <ImageView layoutX="271.0" layoutY="158.0">
          <image>
             <Image url="@../../../../../../Downloads/icons8-search-30.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="106.0" fitWidth="1022.0" layoutX="1.0" layoutY="30.0">
+      <ImageView fitHeight="120.0" fitWidth="1084.0" layoutX="1.0">
          <image>
             <Image url="@../asserts/images/istockphoto-1345520286-612x612.jpg" />
          </image>
       </ImageView>
-      <Text layoutX="373.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Programm">
+      <Text layoutX="421.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Programm">
          <font>
             <Font size="46.0" />
          </font>
@@ -75,18 +75,18 @@
          </font>
       </TextField>
       <Line fx:id="idLine21" endX="104.60003662109375" endY="-0.800018310546875" layoutX="667.0" layoutY="408.0" startX="-120.0" />
-      <JFXButton fx:id="btnSave" layoutX="319.0" layoutY="477.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Save" />
-      <JFXButton fx:id="btnUpdate" layoutX="445.0" layoutY="477.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Update" />
-      <JFXButton fx:id="btnDelete" layoutX="570.0" layoutY="477.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Delete" />
-      <TableView fx:id="tblProgram" layoutX="42.0" layoutY="548.0" prefHeight="334.0" prefWidth="940.0">
+      <JFXButton fx:id="btnSave" layoutX="351.0" layoutY="477.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Save" />
+      <JFXButton fx:id="btnUpdate" layoutX="477.0" layoutY="477.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Update" />
+      <JFXButton fx:id="btnDelete" layoutX="600.0" layoutY="477.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Delete" />
+      <TableView fx:id="tblProgram" layoutX="39.0" layoutY="540.0" prefHeight="306.0" prefWidth="1005.0" stylesheets="@../asserts/css/tblStyle.css">
         <columns>
           <TableColumn fx:id="colId" prefWidth="197.59999465942383" text="ID" />
-          <TableColumn fx:id="colName" prefWidth="278.3999938964844" text="Name" />
-            <TableColumn fx:id="colDuration" prefWidth="210.40005493164062" text="Duration" />
-            <TableColumn fx:id="colFee" prefWidth="252.0" text="Fee" />
+          <TableColumn fx:id="colName" prefWidth="307.9999542236328" text="Name" />
+            <TableColumn fx:id="colDuration" prefWidth="241.5999755859375" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="254.4000244140625" text="Fee" />
         </columns>
       </TableView>
-      <TextField fx:id="txtSearch" layoutX="656.0" layoutY="173.0" prefHeight="39.0" prefWidth="308.0" promptText="Program Id" style="-fx-background-color: #E6E6E6; -fx-background-radius: 30 30 30 30;">
+      <TextField fx:id="txtSearch" layoutX="721.0" layoutY="147.0" prefHeight="39.0" prefWidth="308.0" promptText="Program Id" style="-fx-background-color: #E6E6E6; -fx-background-radius: 30 30 30 30;">
          <font>
             <Font size="24.0" />
          </font>
@@ -98,11 +98,11 @@
             </DropShadow>
          </effect>
       </TextField>
-      <Button fx:id="btnSearch" layoutX="913.0" layoutY="173.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="51.0" prefWidth="50.0" style="-fx-background-color: #D0CFCF; -fx-background-radius: 30 30 30 30;" stylesheets="@../../../../../../Downloads/my%20file/d24_hostel/src/main/resources/styles/search.css">
+      <Button fx:id="btnSearch" layoutX="978.0" layoutY="147.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="51.0" prefWidth="50.0" style="-fx-background-color: #D0CFCF; -fx-background-radius: 30 30 30 30;" stylesheets="@../../../../../../Downloads/my%20file/d24_hostel/src/main/resources/styles/search.css">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Downloads/my%20file/d24_hostel/src/main/resources/assets/search-interface-symbol%201.png" />
+                  <Image url="@../asserts/images/search-interface-symbol 1.png" />
                </image>
             </ImageView>
          </graphic>
@@ -114,11 +114,11 @@
             </DropShadow>
          </effect>
       </Button>
-      <ImageView layoutX="58.0" layoutY="174.0">
+      <ImageView layoutX="58.0" layoutY="149.0">
          <image>
             <Image url="@../asserts/images/icons8-add-50.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="btnADDNew" layoutX="58.0" layoutY="173.0" onAction="#btnAddNewOnAction" prefHeight="50.0" prefWidth="50.0" text="  " />
+      <JFXButton fx:id="btnADDNew" layoutX="58.0" layoutY="149.0" onAction="#btnAddNewOnAction" prefHeight="50.0" prefWidth="50.0" text="  " />
    </children>
 </AnchorPane>

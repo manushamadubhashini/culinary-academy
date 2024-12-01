@@ -18,7 +18,7 @@ public class Launcher extends Application {
                 .setResolveAssets(true)
                 .build()
                 .setGlobal();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminDashboardForm.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminLoginForm.fxml"))));
         stage.setTitle("Login Form");
         stage.centerOnScreen();
         stage.setResizable(false);

@@ -183,16 +183,53 @@ public class programFormController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
-        if (programBO.save(new ProgramDTO(txtPid.getText(), txtName.getText(), txtDuration.getText(),txtFee.getText()))) {
-            new Alert(Alert.AlertType.CONFIRMATION, "saved successfully").show();
-            loadTable();
-            initUI();
+        if(validation()) {
+            if (programBO.save(new ProgramDTO(txtPid.getText(), txtName.getText(), txtDuration.getText(), txtFee.getText()))) {
+                new Alert(Alert.AlertType.CONFIRMATION, "saved successfully").show();
+                loadTable();
+                initUI();
 
 
-        } else {
-            new Alert(Alert.AlertType.ERROR, "saved not successfully").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "saved not successfully").show();
+            }
+        }else{
+            restyleValidate();
+            new Alert(Alert.AlertType.ERROR,"Input Correct Value").show();
         }
 
+    }
+
+    private void restyleValidate() {
+        txtPid.setStyle("");
+        txtName.setStyle("");
+        txtDuration.setStyle("");
+        txtFee.setStyle("");
+    }
+
+    private boolean validation() {
+        boolean hasError=true;
+        if (txtPid.getText().isEmpty()){
+            txtPid.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtPid).play();
+            hasError=false;
+        }
+        if (txtName.getText().isEmpty() || txtName.getText().matches("[A-Za-z ]")){
+            txtName.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtName).play();
+            hasError=false;
+        }
+        if (txtDuration.getText().isEmpty()){
+            txtDuration.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtDuration).play();
+            hasError=false;
+        }
+        if (txtFee.getText().isEmpty()){
+            txtFee.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtFee).play();
+            hasError=false;
+        }
+        return hasError;
     }
 
     @FXML
@@ -221,15 +258,19 @@ public class programFormController {
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
-        if (programBO.update(new ProgramDTO(txtPid.getText(), txtName.getText(), txtDuration.getText(),txtFee.getText()))) {
-            new Alert(Alert.AlertType.CONFIRMATION, "updated successfully").show();
-            setTableValue();
-            loadTable();
-            initUI();
+        if(validation()) {
+            if (programBO.update(new ProgramDTO(txtPid.getText(), txtName.getText(), txtDuration.getText(), txtFee.getText()))) {
+                new Alert(Alert.AlertType.CONFIRMATION, "updated successfully").show();
+                setTableValue();
+                loadTable();
+                initUI();
 
 
-        } else {
-            new Alert(Alert.AlertType.ERROR, "updated not successfully").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "updated not successfully").show();
+            }
+        }else{
+            new Alert(Alert.AlertType.ERROR,"Input Correct Value").show();
         }
 
 

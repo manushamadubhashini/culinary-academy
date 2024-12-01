@@ -53,5 +53,12 @@ public class Student {
 
 
     public Student(String sId, String name, String gender, String address, Date dob, String contact, Date registerDate) {
+        this.studentID=sId;
+        this.studentName=name;
+        this.gender=gender;
+        this.address=address;
+        this.dob=dob;
+        this.contact=contact;
+        this.Register_date=registerDate;
     }
 }

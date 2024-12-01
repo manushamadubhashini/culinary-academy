@@ -16,10 +16,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="920.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.culinary.academy.controller.registrationFormController">
    <children>
-      <ImageView fitHeight="143.0" fitWidth="1007.0">
+      <ImageView fitHeight="143.0" fitWidth="1127.0">
          <image>
             <Image url="@../asserts/images/istockphoto-1345520286-612x612.jpg" />
          </image>
@@ -29,7 +28,7 @@
             <Font name="System Bold" size="50.0" />
          </font>
       </Text>
-      <TextField fx:id="txtSearch" layoutX="666.0" layoutY="183.0" prefHeight="39.0" prefWidth="308.0" promptText="Registration Id" style="-fx-background-color: #E6E6E6; -fx-background-radius: 30 30 30 30;">
+      <TextField fx:id="txtSearch" layoutX="744.0" layoutY="183.0" prefHeight="39.0" prefWidth="308.0" promptText="Registration Id" style="-fx-background-color: #E6E6E6; -fx-background-radius: 30 30 30 30;">
          <font>
             <Font size="24.0" />
          </font>
@@ -41,11 +40,11 @@
             </DropShadow>
          </effect>
       </TextField>
-      <Button fx:id="btnSearch" layoutX="923.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="51.0" prefWidth="50.0" style="-fx-background-color: #D0CFCF; -fx-background-radius: 30 30 30 30;" stylesheets="@../../../../../../Downloads/my%20file/d24_hostel/src/main/resources/styles/search.css">
+      <Button fx:id="btnSearch" layoutX="1001.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="51.0" prefWidth="50.0" style="-fx-background-color: #D0CFCF; -fx-background-radius: 30 30 30 30;" stylesheets="@../../../../../../Downloads/my%20file/d24_hostel/src/main/resources/styles/search.css">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Downloads/my%20file/d24_hostel/src/main/resources/assets/search-interface-symbol%201.png" />
+                  <Image url="@../asserts/images/search-interface-symbol 1.png" />
                </image>
             </ImageView>
          </graphic>
@@ -124,14 +123,14 @@
             <Font size="24.0" />
          </font>
       </TextField>
-      <TableView fx:id="tblRegitration" layoutX="34.0" layoutY="596.0" prefHeight="302.0" prefWidth="940.0" stylesheets="@../asserts/css/tblStyle.css">
+      <TableView fx:id="tblRegitration" layoutX="34.0" layoutY="596.0" prefHeight="302.0" prefWidth="1034.0" stylesheets="@../asserts/css/tblStyle.css">
          <columns>
-            <TableColumn fx:id="colRid" prefWidth="118.39999008178711" text="Registration ID" />
-            <TableColumn fx:id="closid" prefWidth="142.3999786376953" text="Student ID" />
-            <TableColumn fx:id="colpid" prefWidth="147.20001220703125" text="Program ID" />
-            <TableColumn fx:id="clodate" prefWidth="155.20001220703125" text="Date" />
-            <TableColumn fx:id="colSname" prefWidth="157.599853515625" text="Student Name" />
-            <TableColumn fx:id="colPname" prefWidth="216.79998779296875" text="Program Name" />
+            <TableColumn fx:id="colRid" prefWidth="130.4000244140625" text="Registration ID" />
+            <TableColumn fx:id="closid" prefWidth="140.79998779296875" text="Student ID" />
+            <TableColumn fx:id="colpid" prefWidth="161.60003662109375" text="Program ID" />
+            <TableColumn fx:id="clodate" prefWidth="150.4000244140625" text="Date" />
+            <TableColumn fx:id="colSname" prefWidth="191.20001220703125" text="Student Name" />
+            <TableColumn fx:id="colPname" prefWidth="262.40008544921875" text="Program Name" />
          </columns>
       </TableView>
       <JFXButton fx:id="btnSave" layoutX="622.0" layoutY="537.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Save" />

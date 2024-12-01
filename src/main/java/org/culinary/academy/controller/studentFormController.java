@@ -50,12 +50,12 @@ public class studentFormController {
     @FXML
     private TableColumn<?, ?> conName;
 
-
     @FXML
     private Button btnSearch;
 
     @FXML
     private TextField txtSearch;
+
 
     @FXML
     private TableView<StudentTM> tblStundet;
@@ -92,6 +92,33 @@ public class studentFormController {
             e.printStackTrace();
             new Alert(Alert.AlertType.ERROR, "Error initializing form: " + e.getMessage()).show();
         }
+
+        txtRDate.setDayCellFactory(new Callback<DatePicker, DateCell>() {
+            public DateCell call(final DatePicker datePicker) {
+                return new DateCell() {
+                    public void updateItem(LocalDate item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (item.isBefore(LocalDate.now())) {
+                            setDisable(true);
+                            setStyle("-fx-background-color: #ffc0cb;"); // Optional styling for disabled dates
+                        }
+                    }
+                };
+            }
+        });
+        txtDOB.setDayCellFactory(new Callback<DatePicker, DateCell>() {
+            public DateCell call(final DatePicker datePicker) {
+                return new DateCell() {
+                    public void updateItem(LocalDate item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (item.isAfter(LocalDate.now())) {
+                            setDisable(true);
+                            setStyle("-fx-background-color: #ffc0cb;"); // Optional styling for disabled dates
+                        }
+                    }
+                };
+            }
+        });
 
     }
 
@@ -250,29 +277,94 @@ public class studentFormController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
-        if (studentBO.save(new StudentDTO(txtID.getText(),txtName.getText(), txtGender.getText(), txtAddress.getText(),  Date.valueOf(txtDOB.getValue()), txtContact.getText(),Date.valueOf(txtRDate.getValue())))) {
-           new Alert(Alert.AlertType.CONFIRMATION,"saved successfully").show();
-           loadTable();
-           initUI();
+        if(validation()) {
+            if (studentBO.save(new StudentDTO(txtID.getText(), txtName.getText(), txtGender.getText(), txtAddress.getText(), Date.valueOf(txtDOB.getValue()), txtContact.getText(), Date.valueOf(txtRDate.getValue())))) {
+                new Alert(Alert.AlertType.CONFIRMATION, "saved successfully").show();
+                loadTable();
+                initUI();
 
 
-        } else {
-           new  Alert(Alert.AlertType.ERROR,"saved not successfully").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "saved not successfully").show();
+            }
+        }else {
+            resetStyle();
+            new Alert(Alert.AlertType.ERROR, "Input Correct Value").show();
         }
+
+    }
+
+    private void resetStyle() {
+        txtID.setStyle("");
+        txtName.setStyle("");
+        txtGender.setStyle("");
+        txtAddress.setStyle("");
+        txtDOB.setStyle("");
+        txtContact.setStyle("");
+        txtRDate.setStyle("");
+
+
+    }
+
+    private boolean validation() {
+        boolean hasError=true;
+        if(txtID.getText().isEmpty()){
+            txtID.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtID).play();
+            hasError=false;
+        }
+        if(txtName.getText().isEmpty()|| txtName.getText().matches("^[A-Za-z ]")){
+            txtName.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtName).play();
+            hasError=false;
+        }
+        if (txtGender.getText().isEmpty() || (!txtGender.getText().equalsIgnoreCase("male") &&
+                !txtGender.getText().equalsIgnoreCase("female"))){
+            txtGender.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtGender).play();
+            hasError=false;
+        }
+        if (txtAddress.getText().isEmpty() || txtAddress.getText().matches("[A-Za-z ]")){
+            txtAddress.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtAddress).play();
+            hasError=false;
+        }
+        if (txtDOB.getValue()==null){
+            txtDOB.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtDOB).play();
+            hasError=false;
+        }
+        if (txtContact.getText().isEmpty() || txtContact.getText().matches("^0[0-9]{9}$")){
+            txtContact.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtContact).play();
+            hasError=false;
+        }
+        if (txtRDate.getValue()==null){
+            txtRDate.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtRDate).play();
+            hasError=false;
+        }
+        return hasError;
+
 
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+        if(validation()) {
+            resetStyle();
+            if (studentBO.update(new StudentDTO(txtID.getText(), txtName.getText(), txtGender.getText(), txtAddress.getText(), Date.valueOf(txtDOB.getValue()), txtContact.getText(), Date.valueOf(txtRDate.getValue())))) {
+                setTableValue();
+                loadTable();
+                initUI();
 
-        if (studentBO.update(new StudentDTO(txtID.getText(),txtName.getText(), txtGender.getText(), txtAddress.getText(),  Date.valueOf(txtDOB.getValue()), txtContact.getText(),Date.valueOf(txtRDate.getValue())))) {
-            setTableValue();
-            loadTable();
-            initUI();
-
-            new Alert(Alert.AlertType.CONFIRMATION, "update successfully").show();
+                new Alert(Alert.AlertType.CONFIRMATION, "update successfully").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "update not successfully").show();
+            }
         }else{
-            new Alert(Alert.AlertType.ERROR,"update not successfully").show();
+            resetStyle();
+            new Alert(Alert.AlertType.ERROR,"Input Correct Value").show();
         }
 
 

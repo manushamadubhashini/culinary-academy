@@ -49,19 +49,29 @@ public class adminLoginFormController implements Initializable {
     @FXML
     void btnLoginOnAction(ActionEvent event) {
         validation();
-        UserDTO isUser=userBO.getUser(new UserDTO(txtUserName.getText(),txtPassword.getText()));
-        if(isUser!=null){
-            new Alert(Alert.AlertType.ERROR,"nll").show();
-            if (txtPassword.getText().equals(isUser.getPassword())){
+        UserDTO isUser = userBO.getUser(new UserDTO(txtUserName.getText(), txtPassword.getText()));
+        if (isUser != null) {
+            if (txtPassword.getText().equals(isUser.getPassword())) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Login Successfully!").show();
                 try {
-                    Navigation.navigation(Rout.DASHBOARD,root);
+                    Navigation.navigation(Rout.DASHBOARD, root);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
+            } else {
+                txtPassword.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+                new animatefx.animation.Shake(txtPassword).play();
+                new Alert(Alert.AlertType.ERROR, "Password is incorrect").show();
             }
+        } else {
+            txtUserName.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtUserName).play();
+            txtPassword.setStyle("-fx-border-color: red;-fx-border-width: 1px");
+            new animatefx.animation.Shake(txtPassword).play();
+            new Alert(Alert.AlertType.ERROR, "userName not found").show();
+
+
         }
-
-
     }
 
     private void validation() {

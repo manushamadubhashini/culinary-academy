@@ -27,6 +27,18 @@ public class Navigation {
             case PROGRAM:
                 initUi("programForm.fxml");
                 break;
+            case STUDENT:
+                initUi("studentForm.fxml");
+                break;
+            case HOME:
+                initUi("homeForm.fxml");
+                break;
+            case REGISTRATION:
+                initUi("registrationForm.fxml");
+                break;
+            case LOGOUT:
+                initUi("adminLoginForm.fxml");
+                break;
         }
     }
 

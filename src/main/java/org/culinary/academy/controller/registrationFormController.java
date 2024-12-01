@@ -15,6 +15,8 @@ import org.culinary.academy.dto.RegistrationDTO;
 import org.culinary.academy.dto.StudentDTO;
 import org.culinary.academy.dto.tm.RegistrationTM;
 import org.culinary.academy.dto.tm.StudentTM;
+import org.culinary.academy.entity.Program;
+import org.culinary.academy.entity.Registration;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -251,6 +253,7 @@ public class registrationFormController {
 
     @FXML
     void btnSearchOnAction(ActionEvent event) {
+
 
     }
 

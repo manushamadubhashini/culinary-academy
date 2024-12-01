@@ -15,23 +15,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="997.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.culinary.academy.controller.studentFormController">
+<AnchorPane prefHeight="911.0" prefWidth="1110.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.culinary.academy.controller.studentFormController">
    <children>
       <ImageView layoutX="261.0" layoutY="148.0">
          <image>
             <Image url="@../../../../../../Downloads/icons8-search-30.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="-5.0" prefHeight="140.0" prefWidth="1115.0">
+      <AnchorPane prefHeight="122.0" prefWidth="1111.0">
          <children>
-            <ImageView fitHeight="143.0" fitWidth="1115.0" layoutY="-3.0">
+            <ImageView fitHeight="124.0" fitWidth="1116.0" layoutX="-1.0" layoutY="-3.0">
                <image>
                   <Image url="@../asserts/images/istockphoto-1345520286-612x612.jpg" />
                </image>
             </ImageView>
-            <Text layoutX="465.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student">
+            <Text layoutX="465.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student">
                <font>
-                  <Font name="System Bold" size="50.0" />
+                  <Font size="47.0" />
                </font>
             </Text>
          </children>
@@ -69,12 +69,12 @@
          </font>
       </TextField>
       <Line fx:id="idLine11" endX="94.79998779296875" endY="0.199981689453125" layoutX="273.0" layoutY="388.0" startX="-120.0" />
-      <Text layoutX="443.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth :">
+      <Text layoutX="435.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth :">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <DatePicker fx:id="txtDOB" layoutX="592.0" layoutY="369.0" prefHeight="39.0" prefWidth="275.0" />
+      <DatePicker fx:id="txtDOB" layoutX="592.0" layoutY="343.0" prefHeight="39.0" prefWidth="275.0" />
       <Text layoutX="753.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender :">
          <font>
             <Font name="System Bold" size="20.0" />
@@ -86,43 +86,38 @@
          </font>
       </TextField>
       <Line fx:id="idLine12" endX="54.20001220703125" layoutX="956.0" layoutY="289.0" startX="-104.39996337890625" />
-      <Text layoutX="45.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact No :">
+      <Text layoutX="39.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact No :">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField fx:id="idTxt111" layoutX="186.0" layoutY="449.0" prefHeight="51.0" prefWidth="210.0" style="-fx-background-color: tranceparent;">
+      <TextField fx:id="txtContact" layoutX="171.0" layoutY="430.0" prefHeight="51.0" prefWidth="210.0" style="-fx-background-color: tranceparent;">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtContact" layoutX="173.0" layoutY="449.0" prefHeight="51.0" prefWidth="210.0" style="-fx-background-color: tranceparent;">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </TextField>
-      <Line fx:id="idLine111" endX="94.79998779296875" endY="0.199981689453125" layoutX="294.0" layoutY="500.0" startX="-120.0" />
-      <Text layoutX="504.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Date :">
+      <Line fx:id="idLine111" endX="94.79998779296875" endY="0.199981689453125" layoutX="288.0" layoutY="484.0" startX="-120.0" />
+      <Text layoutX="479.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Date :">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <DatePicker fx:id="txtRDate" layoutX="694.0" layoutY="481.0" prefHeight="39.0" prefWidth="275.0" />
-      <TableView fx:id="tblStundet" layoutX="39.0" layoutY="650.0" prefHeight="314.0" prefWidth="1038.0">
+      <DatePicker fx:id="txtRDate" layoutX="679.0" layoutY="435.0" prefHeight="39.0" prefWidth="275.0" />
+      <TableView fx:id="tblStundet" layoutX="21.0" layoutY="580.0" prefHeight="231.0" prefWidth="1038.0" stylesheets="@../asserts/css/tblStyle.css">
         <columns>
-          <TableColumn fx:id="colID" prefWidth="85.59997177124023" text="ID" />
-          <TableColumn fx:id="conName" prefWidth="99.99993896484375" text="Name" />
-            <TableColumn fx:id="colGender" prefWidth="112.00001525878906" text="Gender" />
-            <TableColumn fx:id="colAddress" prefWidth="108.0" text="Address" />
-            <TableColumn fx:id="colDOB" prefWidth="144.79998779296875" text="DOB" />
-            <TableColumn fx:id="colContact" prefWidth="138.39996337890625" text="Contact No" />
-            <TableColumn fx:id="colRDate" prefWidth="152.800048828125" text="Register Date" />
+          <TableColumn fx:id="colID" prefWidth="104.79998779296875" text="ID" />
+          <TableColumn fx:id="conName" prefWidth="143.99996948242188" text="Name" />
+            <TableColumn fx:id="colGender" prefWidth="132.79998779296875" text="Gender" />
+            <TableColumn fx:id="colAddress" prefWidth="160.0" text="Address" />
+            <TableColumn fx:id="colDOB" prefWidth="144.0" text="DOB" />
+            <TableColumn fx:id="colContact" prefWidth="178.4000244140625" text="Contact No" />
+            <TableColumn fx:id="colRDate" prefWidth="185.5999755859375" text="Register Date" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnSave" layoutX="379.0" layoutY="582.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Save" />
-      <JFXButton fx:id="btnUpdate" layoutX="506.0" layoutY="582.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Update" />
-      <JFXButton fx:id="btnDelete" layoutX="628.0" layoutY="582.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Delete" />
-      <TextField fx:id="searchTxt" layoutX="753.0" layoutY="163.0" prefHeight="39.0" prefWidth="308.0" promptText="Student Id" style="-fx-background-color: #E6E6E6; -fx-background-radius: 30 30 30 30;">
+      <JFXButton fx:id="btnSave" layoutX="361.0" layoutY="522.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Save" />
+      <JFXButton fx:id="btnUpdate" layoutX="489.0" layoutY="522.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Update" />
+      <JFXButton fx:id="btnDelete" layoutX="613.0" layoutY="522.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="102.0" stylesheets="@../asserts/css/buttonStyle.css" text="Delete" />
+      <TextField fx:id="txtSearch" layoutX="753.0" layoutY="152.0" prefHeight="39.0" prefWidth="308.0" promptText="Student Id" style="-fx-background-color: #E6E6E6; -fx-background-radius: 30 30 30 30;">
          <font>
             <Font size="24.0" />
          </font>
@@ -134,11 +129,11 @@
             </DropShadow>
          </effect>
       </TextField>
-      <Button fx:id="btnsearch" layoutX="1009.0" layoutY="163.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="51.0" prefWidth="50.0" style="-fx-background-color: #D0CFCF; -fx-background-radius: 30 30 30 30;" stylesheets="@../../../../../../Downloads/my%20file/d24_hostel/src/main/resources/styles/search.css">
+      <Button fx:id="btnsearch" layoutX="1009.0" layoutY="152.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="51.0" prefWidth="50.0" style="-fx-background-color: #D0CFCF; -fx-background-radius: 30 30 30 30;" stylesheets="@../../../../../../Downloads/my%20file/d24_hostel/src/main/resources/styles/search.css">
          <graphic>
             <ImageView fitHeight="40.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Downloads/my%20file/d24_hostel/src/main/resources/assets/search-interface-symbol%201.png" />
+                  <Image url="@../asserts/images/search-interface-symbol 1.png" />
                </image>
             </ImageView>
          </graphic>
@@ -151,7 +146,7 @@
          </effect>
       </Button>
       <ImageView fitHeight="39.0" fitWidth="50.0" layoutX="123.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView layoutX="48.0" layoutY="164.0">
+      <ImageView layoutX="48.0" layoutY="153.0">
          <image>
             <Image url="@../asserts/images/icons8-add-50.png" />
          </image>
